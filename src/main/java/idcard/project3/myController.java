@@ -31,14 +31,21 @@ public class myController {
         
         String blob = Base64.encodeBase64String(image.getBytes());
         
-        SimpleDateFormat tanggal = new SimpleDateFormat("EEEEEEE dd MMMM yyyy");
+        SimpleDateFormat tanggal = new SimpleDateFormat("EEEE dd MMMM yyyy");
         
         String newTanggal = tanggal.format(date);
+        String HariIni = getHari(newTanggal);
         
         
-        return "Nama: " + getText +"<br><br>"+ 
-               "Tanggal: "+newTanggal +"<br><br>" + 
+        return "Nama: " + getText+"<br><br>"+ 
+               "Tanggal: "+HariIni+"<br><br>" + 
                "Foto:" + "<br> <img width='250' src= 'data:image/jpeg;base64,"+blob+"' /><br>";
+    }
+    public String getHari(String tanggal){
+        String[] result = tanggal.split("-");
+        if(result[0].equals("Thu")){result[0]="Kamis";}
+        
+        return result[0];
     }
     
 }
