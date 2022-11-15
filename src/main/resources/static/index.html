@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Text Date Image</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height:50%;
+        border-style: groove;">
+        
+        <div style="text-align: center">IDCARD</div>
+        <hr>
+        <form action="/sendData" method="POST" enctype="multipart/form-data">            
+            Nama: <input type="text" name="mytext"/>
+            <br><br>
+            Tanggal: <input type="date" name="myDate"/>
+            <br><br>
+            Gambar: <input type="file" name="myImage"/>
+            <br><br>
+            <input type="submit" name="send"/>            
+        </form>
+    </body>
+</html>
